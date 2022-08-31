@@ -7,12 +7,14 @@ module.exports = {
       [
         {
           task: "test",
+          important: true,
           deadline: "tomorrow",
           createdAt: new Date(),
           updatedAt: new Date(),
         },
         {
           task: "homework",
+          important: false,
           deadline: "today",
           createdAt: new Date(),
           updatedAt: new Date(),
