@@ -1,5 +1,15 @@
 const User = require("./models").user;
 const Todo = require("./models").todoItem;
+const TodoList = require("./models").todoList;
+
+// test our relation (((((RELATION TEST)))))
+const getListWithUser = async () => {
+  const todoLists = await TodoList.findAll({ raw: true, include: User });
+  console.log(todoLists);
+};
+getListWithUser();
+///this one up is the last way of testing our relation
+
 const getAllUsers = async () => {
   try {
     // This is how we can use a query method to get all the users from the database
